@@ -4,7 +4,7 @@
 #define NM 105
 #define FOR(i,n,m) for (int i=(n);i<=(m);i++)
 typedef long long int ll;
-FILE *in = fopen("input.txt", "r"), *out = fopen("output.txt", "w");
+FILE *in, *out;
 
 int M, N;
 int numKey = 5;
@@ -86,7 +86,9 @@ void pro() {
 		}
 	}
 }
-int main() {
+int main(int argc, char* argv[]) {
+	in = fopen(argv[1], "r");
+	out = fopen(argv[2], "w");
 	input();
 	pro();
 	return 0;
