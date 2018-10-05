@@ -1,3 +1,0 @@
-/home/hoseok/workspace/Advanced-Theory-of-Computation/HW1/Solver/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/hoseok/workspace/Advanced-Theory-of-Computation/HW1/Solver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/hoseok/workspace/Advanced-Theory-of-Computation/HW1/Solver/cmake-build-debug/CMakeFiles/Solver.dir
