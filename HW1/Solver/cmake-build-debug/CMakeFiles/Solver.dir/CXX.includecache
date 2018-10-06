@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hoseok/workspace/Advanced-Theory-of-Computation/HW1/Solver/main.cpp
+stdio.h
+-
+algorithm
+-
+
