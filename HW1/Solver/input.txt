@@ -1,9 +1,15 @@
-4 4
-he--
-she-
-his-
-hers
-he--
-she-
-his-
-hers
+5 10
+aabba
+aaabb
+ababa
+aabba
+aaabb
+aabbaaabba
+aaabbaaabb
+ababaababa
+aabbaaabba
+aaabbaaabb
+baaabbabab
+aababaabba
+aaabbaaabb
+baaabbaaab

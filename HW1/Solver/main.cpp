@@ -7,7 +7,8 @@ typedef long long int ll;
 FILE *in,*out;
 
 int M, N;
-int uniqueRowFlag[NM];
+int uniqueRowFlag[NM], matchingIdx[NM][NM];
+int patLinear[NM], patFail[NM];
 char pat[NM][NM], text[NM][NM];
 
 int acN;
@@ -41,6 +42,7 @@ void numberingRow(){
             cur = cur->next[pat[i][j]-'a'];
         }
         if (cur->id == -1) cur->id = i, uniqueRowFlag[i] = 1;
+        patLinear[i] = cur->id;
     }
 }
 void constructACs(){
@@ -66,6 +68,28 @@ void constructACs(){
     }
 }
 
+void rowMatching(){
+    FOR (i,1,N){
+        AC* cur = &ac[0];
+        FOR (j,1,N){
+            while (cur->next[text[i][j]-'a'] == nullptr){
+                if (cur->fail == nullptr) break;
+                cur = cur->fail;
+            }
+            if (cur->next[text[i][j]-'a'] != nullptr){
+                cur = cur->next[text[i][j]-'a'];
+            }
+            if (cur->id != -1) matchingIdx[i][j] = cur->id;
+            fprintf(out,"%d",matchingIdx[i][j]);
+        }
+        fprintf(out,"\n");
+    }
+}
+
+void colMatching(){
+    // construct failure function for patLinear[]
+}
+
 int main(int argc, char* argv[]){
     if (argc>=3){
         in = fopen(argv[1],"r");
@@ -77,5 +101,6 @@ int main(int argc, char* argv[]){
     input();
     numberingRow();
     constructACs();
+    rowMatching();
     return 0;
 }
