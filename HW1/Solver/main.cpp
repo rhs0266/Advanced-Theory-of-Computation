@@ -7,7 +7,7 @@ typedef long long int ll;
 FILE *in,*out;
 
 int M, N;
-int uniqueRowFlag[NM], matchingIdx[NM][NM];
+int uniqueRowFlag[NM], matchingIdx[NM], kmpPointer[NM];
 int patLinear[NM], patFail[NM];
 char pat[NM][NM], text[NM][NM];
 
@@ -68,10 +68,57 @@ void constructACs(){
     }
 }
 
-void rowMatching(){
+void patKMP(){
+    patFail[0] = -1;
+    patFail[1] = 0;
+
+    int pointer = 0;
+    FOR (i,2,M){
+        for (;;){
+            if (patLinear[pointer+1] == patLinear[i]){
+                patFail[i] = pointer+1;
+                pointer++;
+                break;
+            }else{
+                if (pointer!=0) pointer = patFail[pointer];
+                else{
+                    patFail[i] = 0;
+                    pointer = 0;
+                    break;
+                }
+            }
+        }
+    }
+}
+
+void Baker_Bird(){
+    /* Preprocess */
+
+    // assign number for each line with considering uniqueness
+    numberingRow();
+
+    // construct Aho-Corasick
+    constructACs();
+
+    // calculate KMP failure function for patLinear
+    patKMP();
+
+    /**************/
+
+    /* Baker Bird Algorithm */
+
+    // setup each column's kmp pointers
+    FOR (j,1,N) kmpPointer[j]=0;
+
+
+    // searching pattern in text
     FOR (i,1,N){
+
+        // Calculate pattern matching for i-th text row
         AC* cur = &ac[0];
         FOR (j,1,N){
+
+            // Find matching row for text[i][j-M+1 ... j]
             while (cur->next[text[i][j]-'a'] == nullptr){
                 if (cur->fail == nullptr) break;
                 cur = cur->fail;
@@ -79,15 +126,30 @@ void rowMatching(){
             if (cur->next[text[i][j]-'a'] != nullptr){
                 cur = cur->next[text[i][j]-'a'];
             }
-            if (cur->id != -1) matchingIdx[i][j] = cur->id;
-            fprintf(out,"%d",matchingIdx[i][j]);
-        }
-        fprintf(out,"\n");
-    }
-}
+            int matchingIdx = 0;
+            if (cur->id != -1) matchingIdx = cur->id;
 
-void colMatching(){
-    // construct failure function for patLinear[]
+            if (matchingIdx == 0){ // if this point has no matching row in pattern
+                kmpPointer[j] = 0;
+            }else{ // otherwise, processing kmp algorithm
+                for (;;){
+                    if (patLinear[kmpPointer[j]+1] == matchingIdx){
+                        kmpPointer[j]++;
+                        break;
+                    }else{
+                        if (kmpPointer[j] != 0) kmpPointer[j] = patFail[kmpPointer[j]];
+                        else break;
+                    }
+                }
+                if (kmpPointer[j] == M){
+                    fprintf(out,"%d %d\n",i-1, j-1);
+                    kmpPointer[j] = patFail[M];
+                }
+            }
+        }
+    }
+
+    /************************/
 }
 
 int main(int argc, char* argv[]){
@@ -99,8 +161,6 @@ int main(int argc, char* argv[]){
         out = fopen("../output.txt","w");
     }
     input();
-    numberingRow();
-    constructACs();
-    rowMatching();
+    Baker_Bird();
     return 0;
 }
