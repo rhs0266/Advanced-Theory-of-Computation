@@ -11,7 +11,8 @@ int uniqueRowFlag[NM], matchingIdx[NM], kmpPointer[NM];
 int patLinear[NM], patFail[NM];
 char pat[NM][NM], text[NM][NM];
 
-int acN;
+/* Aho-Corasick data structure */
+int acN;                // # of nodes
 struct AC{
     int id;
     AC* next[26];
@@ -22,21 +23,21 @@ struct AC{
         fail = nullptr;
     }
 }ac[NM*NM];
+/*******************************/
 
+/// Input function
 void input() {
     fscanf(in, "%d %d\n", &M, &N);
     FOR(i, 1, M) fscanf(in, "%s", &pat[i][1]);
     FOR(i, 1, N) fscanf(in, "%s", &text[i][1]);
 }
 
+/// Assign number for each line with considering uniqueness
 void numberingRow(){
     acN = 0;
     FOR (i,1,M){
         AC* cur = &ac[0];
         FOR (j,1,M){
-            /* TEST */
-            if (pat[i][j] == '-') break;
-            /********/
             if (cur->next[pat[i][j]-'a'] == nullptr)
                 cur->next[pat[i][j]-'a'] = &ac[++acN];
             cur = cur->next[pat[i][j]-'a'];
@@ -45,6 +46,8 @@ void numberingRow(){
         patLinear[i] = cur->id;
     }
 }
+
+/// Construct Aho-Corasick
 void constructACs(){
     FOR (i,0,acN){
         // Find failure link for its children
@@ -68,6 +71,7 @@ void constructACs(){
     }
 }
 
+/// Construct KMP failure table for pattern row number sequence
 void patKMP(){
     patFail[0] = -1;
     patFail[1] = 0;
@@ -91,6 +95,7 @@ void patKMP(){
     }
 }
 
+/// Processing Baker-Bird Algorithm
 void Baker_Bird(){
     /* Preprocess */
 
@@ -100,7 +105,7 @@ void Baker_Bird(){
     // construct Aho-Corasick
     constructACs();
 
-    // calculate KMP failure function for patLinear
+    // construct KMP failure table for pattern row number sequence
     patKMP();
 
     /**************/
