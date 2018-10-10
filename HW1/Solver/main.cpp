@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <algorithm>
+#include <queue>
 #pragma warning (disable:4996)
 #define NM 105
 #define FOR(i,n,m) for (int i=(n);i<=(m);i++)
@@ -11,7 +12,7 @@ int uniqueRowFlag[NM], matchingIdx[NM], kmpPointer[NM];
 int patLinear[NM], patFail[NM];
 char pat[NM][NM], text[NM][NM];
 
-/* Aho-Corasick data structure */
+/*** Aho-Corasick data structure ***/
 int acN;                // # of nodes
 struct AC{
     int id;
@@ -23,7 +24,7 @@ struct AC{
         fail = nullptr;
     }
 }ac[NM*NM];
-/*******************************/
+/***********************************/
 
 /// Input function
 void input() {
@@ -49,13 +50,18 @@ void numberingRow(){
 
 /// Construct Aho-Corasick
 void constructACs(){
-    FOR (i,0,acN){
+    std::queue<AC*> Q;
+    Q.push(&ac[0]);
+    while (!Q.empty()){
+        AC* node = Q.front(); Q.pop();
         // Find failure link for its children
         FOR (j,0,25){
-            AC* child = ac[i].next[j];
+            AC* child = node->next[j];
             if (child == nullptr) continue;
 
-            AC* cur = &ac[i];
+            Q.push(child);
+
+            AC* cur = node;
             for (;;){
                 cur = cur->fail;
                 if (cur == nullptr){
@@ -97,7 +103,7 @@ void patKMP(){
 
 /// Processing Baker-Bird Algorithm
 void Baker_Bird(){
-    /* Preprocess */
+    /*** Preprocess ***/
 
     // assign number for each line with considering uniqueness
     numberingRow();
@@ -108,9 +114,9 @@ void Baker_Bird(){
     // construct KMP failure table for pattern row number sequence
     patKMP();
 
-    /**************/
+    /******************/
 
-    /* Baker Bird Algorithm */
+    /*** Baker Bird Algorithm ***/
 
     // setup each column's kmp pointers
     FOR (j,1,N) kmpPointer[j]=0;
@@ -120,6 +126,7 @@ void Baker_Bird(){
     FOR (i,1,N){
 
         // Calculate pattern matching for i-th text row
+
         AC* cur = &ac[0];
         FOR (j,1,N){
 
@@ -133,6 +140,7 @@ void Baker_Bird(){
             }
             int matchingIdx = 0;
             if (cur->id != -1) matchingIdx = cur->id;
+
 
             if (matchingIdx == 0){ // if this point has no matching row in pattern
                 kmpPointer[j] = 0;
@@ -154,7 +162,7 @@ void Baker_Bird(){
         }
     }
 
-    /************************/
+    /****************************/
 }
 
 int main(int argc, char* argv[]){
