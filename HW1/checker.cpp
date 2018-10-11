@@ -100,6 +100,9 @@ int pro() {
 				return false;
 			
 		}
+		else{
+			return false;
+		}
 	}
 	int temp=0;
 	if (fscanf(sol,"%d",&temp)!=EOF) return false;
