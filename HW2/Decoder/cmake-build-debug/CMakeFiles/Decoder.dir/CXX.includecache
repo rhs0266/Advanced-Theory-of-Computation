@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hoseok/workspace/Advanced-Theory-of-Computation/HW2/Decoder/decoder.cpp
+stdio.h
+-
+iostream
+-
+vector
+-
+algorithm
+-
+math.h
+-
+assert.h
+-
+
