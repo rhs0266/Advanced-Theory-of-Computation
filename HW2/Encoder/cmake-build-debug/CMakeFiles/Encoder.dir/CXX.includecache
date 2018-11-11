@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hoseok/workspace/Advanced-Theory-of-Computation/HW2/Encoder/encoder.cpp
+stdio.h
+-
+iostream
+-
+vector
+-
+algorithm
+-
+math.h
+-
+
