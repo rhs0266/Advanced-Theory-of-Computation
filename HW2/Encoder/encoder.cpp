@@ -70,6 +70,7 @@ void print(int id, int ch){
 //	fprintf(out,"%d\n",_reqLen);
 	if (ch==END) ch = 0;
 	f(id, ch, curLen);
+	if (curLen > 3) curLen = 3;
 }
 
 int trieN;

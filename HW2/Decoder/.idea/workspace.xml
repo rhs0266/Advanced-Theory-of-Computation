@@ -15,18 +15,8 @@
       <change beforePath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_in.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_out.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Decoder" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Decoder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/decoded_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/decoded_file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/decoder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/Encoder" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/Encoder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/encoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/encoder.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -49,13 +39,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1534" />
+          <entry key="cpp" value="1567" />
           <entry key="mm" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1605" />
+          <entry key="ObjectiveC" value="1638" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -82,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+            <state relative-caret-position="260">
+              <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -193,12 +183,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541912012490</updated>
       <workItem from="1541912013700" duration="10410000" />
-      <workItem from="1541996127084" duration="853000" />
+      <workItem from="1541996127084" duration="1054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11263000" />
+    <option name="totallyTimeSpent" value="11464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="987" extended-state="6" />
@@ -209,8 +199,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33993015" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39813736" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33993015" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39813736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -307,8 +297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+        <state relative-caret-position="260">
+          <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

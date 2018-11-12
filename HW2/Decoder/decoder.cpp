@@ -129,6 +129,7 @@ void decoding() {
 			scanf("%c",&ch);
 			encode = encode * PrintableCnt + (unsigned char)ch;
 		}
+		if (curLen > 3 ) curLen = 3;
 
 		int id = encode / S;
 		int _ch = encode % S;
