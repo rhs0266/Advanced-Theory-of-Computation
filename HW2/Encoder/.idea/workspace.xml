@@ -15,6 +15,19 @@
       <change beforePath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_in.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/cmake-build-debug/Decoder" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/cmake-build-debug/Decoder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/cmake-build-debug/decoded_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/cmake-build-debug/decoded_file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/cmake-build-debug/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Decoder/decoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Decoder/decoder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Encoder" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Encoder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/encoder.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,35 +41,51 @@
     <session id="-31239843">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="362" />
-          <entry key="mm" value="23" />
+          <entry key="cpp" value="679" />
+          <entry key="mm" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="385" />
+          <entry key="ObjectiveC" value="708" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -65,6 +94,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>�</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -83,30 +117,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="895" />
-    <option name="height" value="979" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="928" />
+    <option name="height" value="959" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Encoder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Encoder" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -151,37 +172,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541909862013</updated>
-      <workItem from="1541909863271" duration="2176000" />
+      <workItem from="1541909863271" duration="12173000" />
+      <workItem from="1541985299103" duration="2432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2176000" />
+    <option name="totallyTimeSpent" value="14605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="987" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16362631" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3356009" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="CMake" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32945284" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32945284" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993015" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33993015" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39831528" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3282887" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,15 +213,34 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/encoder.cpp</url>
+          <line>108</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="parIdx[i]" language="ObjectiveC" />
-        <watch expression="parEdge[i]" language="ObjectiveC" />
+        <watch expression="parIdx[101]" language="ObjectiveC" />
+        <watch expression="parEdge[101]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>parEdge[101]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parIdx[101]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>parEdge[i]</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -213,13 +254,24 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/encoded_file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/encoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
+        <state relative-caret-position="340">
+          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

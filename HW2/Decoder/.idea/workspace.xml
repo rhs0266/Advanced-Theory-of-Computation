@@ -15,12 +15,19 @@
       <change beforePath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_in.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Decoder" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Decoder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/decoded_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/decoded_file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/decoder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/Encoder" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/Encoder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/encoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/encoder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoder/infile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/infile.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,19 +41,21 @@
     <session id="2043577793">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1514" />
+          <entry key="cpp" value="1534" />
           <entry key="mm" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1585" />
+          <entry key="ObjectiveC" value="1605" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,7 +73,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor" />
@@ -73,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="125" selection-start-line="125" selection-end-line="125" />
+            <state relative-caret-position="74">
+              <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -85,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encoded_file.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="9362" column="65" lean-forward="true" selection-start-line="9362" selection-start-column="65" selection-end-line="9362" selection-end-column="65" />
+            <state relative-caret-position="159154">
+              <caret line="9362" column="65" selection-start-line="9362" selection-start-column="65" selection-end-line="9362" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -114,7 +123,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="928" />
@@ -183,37 +192,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541912012490</updated>
-      <workItem from="1541912013700" duration="8100000" />
+      <workItem from="1541912013700" duration="10410000" />
+      <workItem from="1541996127084" duration="853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8100000" />
+    <option name="totallyTimeSpent" value="11263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="928" height="959" extended-state="4" />
+    <frame x="65" y="-4" width="1855" height="987" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.31405896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32851985" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34055355" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39831528" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33993015" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39813736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3282887" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,8 +237,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/decoder.cpp</url>
-          <line>112</line>
-          <option name="timeStamp" value="17" />
+          <line>104</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -290,15 +300,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/encoded_file.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="9362" column="65" lean-forward="true" selection-start-line="9362" selection-start-column="65" selection-end-line="9362" selection-end-column="65" />
+        <state relative-caret-position="159154">
+          <caret line="9362" column="65" selection-start-line="9362" selection-start-column="65" selection-end-line="9362" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/decoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        <state relative-caret-position="74">
+          <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

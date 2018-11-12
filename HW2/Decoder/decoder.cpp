@@ -40,7 +40,7 @@ inline char convert(int x) {
 
 inline int reqLen(int id) {
 	// (id,ch) pair를 표현하는 데에 필요한 최소 출력 글자 수
-	int target = id << 7;
+	int target = id * (S+1);
 
 	unsigned int pBit = 1, pP = PrintableCnt;
 	while (pP <= target) {
@@ -57,7 +57,7 @@ void push(int x,int len) {
 	cout << (char)((x % PrintableCnt) + PrintableBegin);
 }
 void f(int id, int ch, int len) {
-	int x = (id << 7) + ch;
+	int x = id * S + ch;
 	push(x, len);
 }
 
@@ -122,7 +122,7 @@ void decoding() {
 				scanf("%c", &ch);
 				encode = encode * PrintableCnt + (unsigned char) ch;
 			}
-			print(encode >> 7);
+			print(encode / S);
 			break;
 		}
 		FOR (i,2, curLen){
@@ -130,8 +130,8 @@ void decoding() {
 			encode = encode * PrintableCnt + (unsigned char)ch;
 		}
 
-		int id = encode >> 7;
-		int _ch = encode % (1<<7);
+		int id = encode / S;
+		int _ch = encode % S;
 		fprintf(out,"%d\t%d\n",id,_ch);
 
 		print(id);

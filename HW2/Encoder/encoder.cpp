@@ -7,7 +7,7 @@
 #define si(n) fscanf(in,"%d",&n)
 #define NM 500005
 using namespace std;
-FILE *in = fopen("../infile.txt", "r");
+FILE *in = fopen("../infile.txt", "r"), *out=fopen("output.txt","w");
 //FILE *in = stdin, *out = stdout;
 typedef long long int ll;
 const double EPS = 1e-8;
@@ -18,14 +18,14 @@ const double EPS = 1e-8;
 #define END 255
 #define INC 254
 
-int S = 70;
+int S = 71;
 vector<int> mem;
 int curLen = 0;
 
 inline int convert(char x) {
 	if (x >= 'a' && x <= 'z') return x - 'a' + 0;
 	if (x >= 'A' && x <= 'Z') return x - 'A' + 26;
-	if (x >= '0' && x <= '9') return x - 'a' + 52;
+	if (x >= '0' && x <= '9') return x - '0' + 52;
 	if (x == '?') return 62;
 	if (x == '!') return 63;
 	if (x == ' ') return 64;
@@ -34,13 +34,15 @@ inline int convert(char x) {
 	if (x == ':') return 67;
 	if (x == ';') return 68;
 	if (x == '\n') return 69;
+	if (x == '\r') return 70;
 }
 
-inline int reqLen(int id) {
+inline int reqLen(int id, int ch) {
 	// (id,ch) pair를 표현하는 데에 필요한 최소 출력 글자 수
-	int target = id << 7;
+	ll target = id * S + ch;
 
-	unsigned int pBit = 1, pP = PrintableCnt;
+	int pBit = 1;
+	ll pP = PrintableCnt;
 	while (pP <= target) {
 		pP *= PrintableCnt;
 		pBit++;
@@ -48,22 +50,25 @@ inline int reqLen(int id) {
 	return pBit;
 }
 
-void push(int x,int len) {
+void push(ll x,int len) {
 	if (len == 0) return;
 	push(x / PrintableCnt, len - 1);
 //	fprintf(out, "%c", (x % PrintableCnt) + PrintableBegin);
-	cout << (char)((x % PrintableCnt) + PrintableBegin);
+	cout << (unsigned char)((x % PrintableCnt) + PrintableBegin);
 }
 void f(int id, int ch, int len) {
-	int x = (id << 7) + ch;
+	ll x = (id) * S + ch;
 	push(x, len);
 }
 void print(int id, int ch){
-	int _reqLen = reqLen(id);
+	int _reqLen = reqLen(id, ch);
 	while (curLen < _reqLen) {
-		cout << (char)(INC);
+		cout << (char) (INC);
 		curLen++;
 	}
+//	fprintf(out,"%d\t%d\n",id, ch);
+//	fprintf(out,"%d\n",_reqLen);
+	if (ch==END) ch = 0;
 	f(id, ch, curLen);
 }
 
@@ -73,7 +78,7 @@ public:
 	TRIE() {}
 	TRIE(int id) :id(id) {}
 	int id;
-	TRIE *next[70];
+	TRIE *next[71];
 }trie[NM];
 int parIdx[NM], parEdge[NM];
 
@@ -113,12 +118,13 @@ void encoding() {
 			node = nextNode;
 		}
 	}
+	cout << (char)END;
 	print(node->id,END);
 
 }
 
 int main() {
-	freopen("output.txt","w",stdout);
+	freopen("encoded_file.txt","w",stdout);
 	init();
 	encoding();
 //	FOR (i,PrintableBegin, PrintableEnd){
