@@ -6,7 +6,7 @@
 #include <assert.h>
 #define FOR(i,n,m) for (int i=n;i<=m;i++)
 #define si(n) fscanf(in,"%d",&n)
-#define NM 500005
+#define NM 1000005
 using namespace std;
 FILE *in = fopen("s", "r"), *out=fopen("output.txt","w");
 //FILE *in = stdin, *out = stdout;
