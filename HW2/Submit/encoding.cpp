@@ -8,7 +8,6 @@
 #define NM 1000005
 using namespace std;
 FILE *in;
-//FILE *in = stdin, *out = stdout;
 typedef long long int ll;
 const double EPS = 1e-8;
 
