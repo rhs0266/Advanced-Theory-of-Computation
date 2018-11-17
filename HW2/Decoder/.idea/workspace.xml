@@ -15,8 +15,14 @@
       <change beforePath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/Solver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_in.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/bb_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW1/bb_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Decoder.dir/decoder.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Decoder" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Decoder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/decoder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/CMakeFiles/Encoder.dir/encoder.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Encoder/cmake-build-debug/Encoder" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/cmake-build-debug/Encoder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Encoder/encoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoder/encoder.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -31,21 +37,22 @@
     <session id="2043577793">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1567" />
+          <entry key="cpp" value="2115" />
           <entry key="mm" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1638" />
+          <entry key="ObjectiveC" value="2186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -72,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
+            <state relative-caret-position="425">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -113,11 +120,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="992" />
     <option name="y" value="24" />
     <option name="width" value="928" />
-    <option name="height" value="959" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,15 +190,16 @@
       <option name="presentableId" value="Default" />
       <updated>1541912012490</updated>
       <workItem from="1541912013700" duration="10410000" />
-      <workItem from="1541996127084" duration="1054000" />
+      <workItem from="1541996127084" duration="4516000" />
+      <workItem from="1542428085086" duration="3348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11464000" />
+    <option name="totallyTimeSpent" value="18274000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="987" extended-state="6" />
+    <frame x="992" y="24" width="928" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.31405896" />
@@ -199,13 +207,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33993015" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33943966" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39813736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3282887" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.3275862" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -223,15 +231,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/decoder.cpp</url>
-          <line>104</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="(unsigned char)ch" language="ObjectiveC" />
@@ -297,8 +296,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
+        <state relative-caret-position="425">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
