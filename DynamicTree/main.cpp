@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <algorithm>
-#define NM 100005
+#define NM 105
 FILE *in=fopen("../input.txt","r"),*out=fopen("../output.txt","w");
 //FILE *in=stdin,*out=stdout;
 using namespace std;
@@ -120,12 +120,37 @@ NODE *lca(NODE *u, NODE *v) {
     return u->pp;
 }
 
+
+int groundTruth[105][105]; // groundTruth[u][v] : u is parent of v
 int n, Q;
+
+void printHierarchy(int x,int depth){
+	for (int i=0;i<depth;i++) printf("----");
+	printf("%d\n",x);
+	for (int i=1;i<=n;i++){
+		if (groundTruth[x][i]==1) printHierarchy(i, depth+1);
+	}
+}
+void viz(){
+	printf("VISUALIZATION *****************************\n");
+	for (int i=1;i<=n;i++){
+		int flag=0;
+		for (int j=1;j<=n;j++) {
+			if (groundTruth[j][i]==1) flag=1;
+		}
+		if (flag==0) printHierarchy(i, 0);
+	}
+	printf("*******************************************\n");
+}
 void input(){
     fscanf(in,"%d %d",&n,&Q);
     for (int i=1;i<=n;i++) {
         vertex[i].key = i;
     }
+
+    fflush(stdout);
+	printf("Iitialization\n");
+	viz();
 }
 void pro(){
     for (;Q--;){
@@ -133,12 +158,23 @@ void pro(){
         fscanf(in,"%d",&type);
         if (type==1){
             int x, y;
-            fscanf(in,"%d %d",&x,&y);
+            fscanf(in,"%d %d",&x,&y);           // set y as parent of x
             link(&vertex[x], &vertex[y]);
+
+            groundTruth[y][x] = 1;
+            printf("Command: Link %d %d; set %d as parent of %d\n",y,x,y,x);
+            viz();
         }else if (type==2){
             int x;
-            fscanf(in,"%d",&x);
+            fscanf(in,"%d",&x);                 // cut edge b/w x and its parent
             cut(&vertex[x]);
+
+            for (int i=1;i<=n;i++)
+                if (groundTruth[i][x] == 1)
+                    groundTruth[i][x] = 0;
+
+			printf("Command: Cut %d; cut edge b/w %d and its parent\n",x,x);
+			viz();
         }else{
             int x, y;
             fscanf(in,"%d %d",&x,&y);
