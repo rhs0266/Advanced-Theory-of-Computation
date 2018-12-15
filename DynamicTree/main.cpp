@@ -13,14 +13,16 @@ public:
     int key;
 }vertex[NM];
 
-
+/*
+ * isLeftChild(x)
+ */
 bool isLeftChild(NODE *x){
     if (x->par == nullptr) return false;
     return x == x->par->left;
 }
 
 /*
- * rotate operation ; rearrange relations between adjacent two layers
+ * rotate(cur) ; rearrange relations between adjacent two layers
  * cur : make cur as parent of its parent
  */
 void rotate(NODE *cur) {
@@ -46,7 +48,7 @@ void rotate(NODE *cur) {
 }
 
 /*
- * splay operation ; apply splay operation on \cur\ node
+ * splay(cur) ; apply splay operation on \cur\ node
  */
 void splay(NODE *cur) {
     while (cur->par) {
@@ -61,7 +63,7 @@ void splay(NODE *cur) {
 }
 
 /*
- * access operation ; make preferred-path from \cur\ node to root node
+ * access(cur) ; make preferred-path from \cur\ node to root node
  */
 void access(NODE *cur) {
     splay(cur);
@@ -87,7 +89,7 @@ void access(NODE *cur) {
 }
 
 /*
- * link operation ; link edge between \u\ node and \v\ node. \u\ node will be a parent of \v\ node
+ * link(u, v) ; link edge between \u\ node and \v\ node. \u\ node will be a parent of \v\ node
  */
 void link(NODE *u, NODE *v) {
     access(u);
@@ -97,7 +99,7 @@ void link(NODE *u, NODE *v) {
 }
 
 /*
- * cut operation ; cut edge between \cur\ node and its parent node
+ * cut(cur) ; cut edge between \cur\ node and its parent node
  */
 void cut(NODE *cur) {
     access(cur);
@@ -108,7 +110,7 @@ void cut(NODE *cur) {
 }
 
 /*
- * lca operation ; find lowest common ancestor of \u\ and \v\ nodes
+ * lca(u, v) ; find lowest common ancestor of \u\ and \v\ nodes
  */
 NODE *lca(NODE *u, NODE *v) {
     access(u);
