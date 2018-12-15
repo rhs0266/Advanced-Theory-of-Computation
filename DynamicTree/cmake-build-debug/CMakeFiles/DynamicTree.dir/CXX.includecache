@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ryuhoseok/workspace/Advanced-Theory-of-Computation/DynamicTree/main.cpp
+stdio.h
+-
+algorithm
+-
+
