@@ -1,153 +1,144 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <algorithm>
-#define NM 100005
-FILE *in=fopen("../input.txt","r"),*out=fopen("../output.txt","w");
-//FILE *in=stdin,*out=stdout;
+#include <stdlib.h>
+#include <string>
+#include <vector>
+#include <time.h>
+#include <queue>
 using namespace std;
-
-struct NODE{
-public:
-    NODE():key(0),par(nullptr),left(nullptr),right(nullptr),pp(nullptr){}
-    NODE(int _key):key(_key),par(nullptr),left(nullptr),right(nullptr),pp(nullptr){}
-    NODE *par, *left, *right, *pp;
-    int key;
-}vertex[NM];
-
-/*
- * isLeftChild(x)
- */
-bool isLeftChild(NODE *x){
-    if (x->par == nullptr) return false;
-    return x == x->par->left;
+#define FOR(i,n,m) for (int i=(n);i<=(m);i++)
+#define NM 100005
+int par[NM], parCnt;
+vector<int> child[NM];
+int findRoot(int x) {
+	return par[x] == 0 ? x : findRoot(par[x]);
 }
 
-/*
- * rotate(cur) ; rearrange relations between adjacent two layers
- * cur : make cur as parent of its parent
- */
-void rotate(NODE *cur) {
-    NODE *p_cur = cur->par;
-    if (isLeftChild(cur)) {   // if cur is left child
-        p_cur->left = cur->right;
-        if (cur->right) cur->right->par = p_cur;
-        cur->right = p_cur;
-    } else {                    // if cur is right child
-        p_cur->right = cur->left;
-        if (cur->left) cur->left->par = p_cur;
-        cur->left = p_cur;
-    }
-    cur->par = p_cur->par;
-    p_cur->par = cur;
-    if (cur->par) {
-        if (cur->par->left == p_cur) cur->par->left = cur;
-        else cur->par->right = cur;
-    } else {
-        cur->pp = p_cur->pp;
-        p_cur->pp = NULL;
-    }
+inline int myRand() {
+	return rand() * RAND_MAX + rand();
 }
 
-/*
- * splay(cur) ; apply splay operation on \cur\ node
- */
-void splay(NODE *cur) {
-    while (cur->par) {
-        NODE *p_cur = cur->par;
-        NODE *p_p_cur = p_cur->par;
-        if (p_cur->par != nullptr) {
-            if (isLeftChild(cur) == isLeftChild(p_cur)) rotate(p_cur);
-            else rotate(cur);
-        }
-        rotate(cur);
-    }
+int makeType(int link, int cut, int lca) {
+	int x = myRand() % (link + cut + lca);
+	if (x < link) return 1;
+	if (x < link + cut) return 2;
+	return 3;
 }
 
-/*
- * access(cur) ; make preferred-path from \cur\ node to root node
- */
-void access(NODE *cur) {
-    splay(cur);
-    if (cur->right) {                   // cut lower preferred-path of cur & make path-parent edge
-        cur->right->pp = cur;
-        cur->right->par = NULL;
-        cur->right = NULL;
-    }
+void makeData(int n,int Q, string filename){ // node n, query M
+	FILE *out = fopen(("data/" + filename + ".in").c_str(), "w");
 
-    // below part ; repeating splay operation and making preferred-path towards root node
-    while (cur->pp) {
-        NODE *pp = cur->pp;
-        splay(pp);
-        if (pp->right) {
-            pp->right->pp = pp;
-            pp->right->par = NULL;
-        }
-        pp->right = cur;
-        cur->par = pp;
-        cur->pp = NULL;
-        splay(cur);
-    }
-}
+	FOR(i, 1, n) par[i] = 0, child[i].clear();
+	parCnt = 0;
+	fprintf(out, "%d\n", Q);
+	FOR(q, 1, Q) {
+		if (q == 19388) {
+			q = q;
+		}
+		int type = makeType(50, 10, 10);
+		//printf("%d %d\n", q, type);
+		if (type == 1) { // link
+			if (parCnt > n*0.8) {
+				q--;
+				continue;
+			}
+			// find u
+			int u, v;
+			u = myRand() % n + 1;
+			while (par[u] != 0) {
+				u++;
+				if (u > n) u = 1;
+			}
 
-/*
- * link(u, v) ; link edge between \u\ node and \v\ node. \u\ node will be a parent of \v\ node
- */
-void link(NODE *u, NODE *v) {
-    access(u);
-    access(v);
-    u->left = v;
-    v->par = u;
-}
+			// find v
+			v = myRand() % n + 1;
+			int _u = findRoot(u);
+			while (_u == findRoot(v)) {
+				v = myRand() % n + 1;
+			}
 
-/*
- * cut(cur) ; cut edge between \cur\ node and its parent node
- */
-void cut(NODE *cur) {
-    access(cur);
-    if (cur->left) {
-        cur->left->par = NULL;
-        cur->left = NULL;
-    }
-}
+			fprintf(out, "1 %d %d\n", u, v);
 
-/*
- * lca(u, v) ; find lowest common ancestor of \u\ and \v\ nodes
- */
-NODE *lca(NODE *u, NODE *v) {
-    access(u);
-    access(v);
-    splay(u);
-    if (u->pp == nullptr) return u;
-    return u->pp;
-}
+			par[v] = u;
 
-int n, Q;
-void input(){
-    fscanf(in,"%d %d",&n,&Q);
-    for (int i=1;i<=n;i++) {
-        vertex[i].key = i;
-    }
+			child[u].emplace_back(v);
+			parCnt++;
+		}
+		else if (type == 2) {
+			if (parCnt < n * 0.1) {
+				q--;
+				continue;
+			}
+			// find v
+			int v;
+			v = myRand() % n + 1;
+			while (par[v] == 0) {
+				v++;
+				if (v > n) v = 1;
+			}
+
+			fprintf(out, "2 %d\n", v);
+
+			int p_v = par[v];
+			int flag = 0;
+			for (int i = 0; i < child[p_v].size()-1; i++) {
+				if (child[p_v][i] == v) flag = 1;
+				if (flag) child[p_v][i] = child[p_v][i + 1];
+			}
+			child[p_v].resize(child[p_v].size() - 1);
+
+			par[v] = 0;
+			parCnt--;
+		}
+		else {
+			// find u
+			int u, v;
+			u = myRand() % n + 1;
+			while (par[u] != 0) {
+				u++;
+				if (u > n) u = 1;
+			}
+
+			queue<int> Q;
+			vector<int> cand;
+			Q.push(u);
+			while (!Q.empty()) {
+				int x = Q.front(); Q.pop();
+				cand.emplace_back(x);
+				for (auto& c : child[x]) {
+					Q.push(c);
+				}
+			}
+			int x = myRand() % cand.size();
+			int y = myRand() % cand.size();
+			fprintf(out, "3 %d %d\n", cand[x], cand[y]);
+		}
+	}
+	fclose(out);
 }
-void pro(){
-    for (;Q--;){
-        int type;
-        fscanf(in,"%d",&type);
-        if (type==1){
-            int x, y;
-            fscanf(in,"%d %d",&x,&y);
-            link(&vertex[x], &vertex[y]);
-        }else if (type==2){
-            int x;
-            fscanf(in,"%d",&x);
-            cut(&vertex[x]);
-        }else{
-            int x, y;
-            fscanf(in,"%d %d",&x,&y);
-            fprintf(out,"%d\n",lca(&vertex[x], &vertex[y])->key);
-        }
-    }
+void sampling(int n, int Q) {
+	char intStr[100];
+	for (int i = 0; i < 10; i++) {
+		printf("%d\n", i + 1);
+		itoa(n, intStr, 10);
+		string strN = string(intStr);
+		itoa(Q, intStr, 10);
+		string strQ = string(intStr);
+		itoa(i, intStr, 10);
+		string strIdx = string(intStr);
+
+		makeData(n, Q, strN + "_" + strQ + "_" + strIdx);
+	}
 }
-int main(){
-    input();
-    pro();
-    return 0;
+int main() {
+	//srand(time(NULL));
+//	sampling(100, 200);
+//	sampling(1000, 2000);
+//sampling(10000, 20000);
+sampling(10000, 50000);
+//sampling(10000, 100000);
+//sampling(100000, 200000);
+//sampling(100000, 500000);
+	//sampling(100000, 1000000);
+	return 0;
 }
