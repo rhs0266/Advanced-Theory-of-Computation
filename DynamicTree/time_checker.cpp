@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <algorithm>
 #include <stdlib.h>
 #include <string>
@@ -172,12 +172,12 @@ void comparing(string filename) {
 	DynamicTree(filename);
 	dtEnd = clock();
 
-	fprintf(logging, "%s %d\n", filename.c_str(), dtEnd - dtStart);
+	fprintf(logging, "%d\n", dtEnd - dtStart);
 }
 
 int main() {
 	FILE *in = fopen("../data_link/inputList.txt", "r");
-	for (int i = 1; i <= 80; i++) {
+	for (int i = 1; i <= 10; i++) {
 		printf("%d\n", i);
 		char str[100];
 		fscanf(in, "%s", str);
