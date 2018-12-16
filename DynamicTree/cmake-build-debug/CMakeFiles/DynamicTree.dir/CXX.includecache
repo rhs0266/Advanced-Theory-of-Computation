@@ -11,4 +11,14 @@ stdio.h
 -
 algorithm
 -
+stdlib.h
+-
+string
+-
+vector
+-
+time.h
+-
+queue
+-
 

@@ -15,7 +15,9 @@ int findRoot(int x) {
 }
 
 inline int myRand() {
-	return rand() * RAND_MAX + rand();
+	if (RAND_MAX == 0x7fff){
+		return rand()*RAND_MAX + rand();
+	}else return rand();
 }
 
 int makeType(int link, int cut, int lca) {
@@ -32,8 +34,9 @@ void makeData(int n,int Q, string filename){ // node n, query M
 	parCnt = 0;
 	fprintf(out, "%d\n", Q);
 	FOR(q, 1, Q) {
-		if (q == 19388) {
-			q = q;
+		if (q == 36425) {
+			q = q+1;
+			q=q-1;
 		}
 		int type = makeType(50, 10, 10);
 		//printf("%d %d\n", q, type);
@@ -92,7 +95,7 @@ void makeData(int n,int Q, string filename){ // node n, query M
 		}
 		else {
 			// find u
-			int u, v;
+			int u;
 			u = myRand() % n + 1;
 			while (par[u] != 0) {
 				u++;
@@ -120,12 +123,9 @@ void sampling(int n, int Q) {
 	char intStr[100];
 	for (int i = 0; i < 10; i++) {
 		printf("%d\n", i + 1);
-		itoa(n, intStr, 10);
-		string strN = string(intStr);
-		itoa(Q, intStr, 10);
-		string strQ = string(intStr);
-		itoa(i, intStr, 10);
-		string strIdx = string(intStr);
+		string strN = to_string(n);
+		string strQ = to_string(Q);
+		string strIdx = to_string(i);
 
 		makeData(n, Q, strN + "_" + strQ + "_" + strIdx);
 	}
